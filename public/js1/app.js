@@ -6853,6 +6853,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     this.getProfesore();
@@ -34766,33 +34769,39 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _vm.arrayProfesore
-    ? _c("div", { staticClass: "staff" }, [
-        _c("div", { staticClass: "img-wrap d-flex align-items-stretch" }, [
-          _c("div", { staticClass: "img align-self-stretch" }, [
-            _c("a", { attrs: { href: "#" } }, [
-              _c("img", {
-                staticClass: "img-fluid ",
-                attrs: {
-                  src: "imagepage/profesores/inicial" + _vm.profesore.imagen,
-                  title: _vm.profesore.nombres
-                }
-              })
+    ? _c(
+        "div",
+        _vm._l(_vm.arrayProfesore, function(profesore) {
+          return _c("div", { key: profesore.id, staticClass: "staff" }, [
+            _c("div", { staticClass: "img-wrap d-flex align-items-stretch" }, [
+              _c("div", { staticClass: "img align-self-stretch" }, [
+                _c("a", { attrs: { href: "#" } }, [
+                  _c("img", {
+                    staticClass: "img-fluid ",
+                    attrs: {
+                      src: "imagepage/profesores/" + profesore.imagen,
+                      title: profesore.nombres
+                    }
+                  })
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "text pt-3 text-center" }, [
+              _c("h3", [_vm._v(_vm._s(profesore.nombres))]),
+              _vm._v(" "),
+              _c("span", { staticClass: "position mb-2" }, [
+                _vm._v(_vm._s(profesore.curso_cargo) + " ")
+              ]),
+              _vm._v(" "),
+              _c("strong", [_c("p", [_vm._v(_vm._s(profesore.nivel))])]),
+              _vm._v(" "),
+              _vm._m(0, true)
             ])
           ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "text pt-3 text-center" }, [
-          _c("h3", [_vm._v(_vm._s(_vm.profesore.nombres))]),
-          _vm._v(" "),
-          _c("span", { staticClass: "position mb-2" }, [
-            _vm._v(_vm._s(_vm.profesore.curso_cargo) + " ")
-          ]),
-          _vm._v(" "),
-          _c("strong", [_c("p", [_vm._v(_vm._s(_vm.profesore.nivel))])]),
-          _vm._v(" "),
-          _vm._m(0)
-        ])
-      ])
+        }),
+        0
+      )
     : _vm._e()
 }
 var staticRenderFns = [

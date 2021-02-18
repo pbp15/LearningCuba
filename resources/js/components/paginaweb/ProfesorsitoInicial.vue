@@ -14,10 +14,11 @@
 	</div> -->
 
   
-                        <div v-if="arrayProfesore"  class="staff">
+                        <div v-if="arrayProfesore"   >
+                            <div class="staff" v-for="profesore in arrayProfesore" :key="profesore.id" >
                             <div class="img-wrap d-flex align-items-stretch">
                                 <div  class="img align-self-stretch">
-                		        	<a href="#"><img  class="img-fluid " :src="'imagepage/profesores/inicial'+profesore.imagen" :title="profesore.nombres" />	</a>
+                		        	<a href="#"><img  class="img-fluid " :src="'imagepage/profesores/'+ profesore.imagen" :title="profesore.nombres" />	</a>
                              </div>
                                
                             </div>
@@ -36,6 +37,8 @@
                                 </div>
                             </div>
                         </div> 
+                        </div> 
+                      
               
 
 		

@@ -22,7 +22,6 @@ Route::group(['middleware' => ['guest']], function(){
     Route::post('/login', 'Auth\LoginController@login')->name('login');
     /* VISTAS DE PAGINA WEB */
 
-    Route::get('/inicial','PaginaController@nivelinicial')->name('nivel-inicial');
 
     //MENU DE COMUNIDAD
     Route::get('/eventos','PaginaController@eventos')->name('eventos');

@@ -112,7 +112,7 @@
 						<h3 class="text-center"><a href="#">Inicial</a></h3>
 						<p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary
 							regelialia. It is a paradisematic country</p>
-						<p><a href="#" class="btn btn-primary"> Ver más </a></p>
+						<p><a href="{{route('inicial')}}" class="btn btn-primary"> Ver más </a></p>
 					</div>
 				</div>
 				<div class="col-md-3 course ftco-animate">
