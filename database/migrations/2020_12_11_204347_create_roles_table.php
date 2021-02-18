@@ -21,9 +21,10 @@ class CreateRolesTable extends Migration
             $table->boolean('condicion')->default(1);          
         });
         DB::table('roles')->insert(array('id'=>'1','nombre'=>'Administrador', 'descripcion'=>'Administrador del sistema'));
-        DB::table('roles')->insert(array('id'=>'2','nombre'=>'Secretaria', 'descripcion'=>'secretaria de trámite documentario'));
-        DB::table('roles')->insert(array('id'=>'3','nombre'=>'Gerente', 'descripcion'=>'Gerente  municipal'));
-        DB::table('roles')->insert(array('id'=>'4','nombre'=>'Usuario', 'descripcion'=>'Usuario del sistema'));
+        DB::table('roles')->insert(array('id'=>'2','nombre'=>'Secretaria', 'descripcion'=>'secretaria de I.E.P'));
+        DB::table('roles')->insert(array('id'=>'3','nombre'=>'Promotor', 'descripcion'=>'Promotor de I.E.P'));
+        DB::table('roles')->insert(array('id'=>'4','nombre'=>'Alumno', 'descripcion'=>'Usuario de I.E.P'));
+        DB::table('roles')->insert(array('id'=>'4','nombre'=>'Docente', 'descripcion'=>'Usuario de I.E.P'));
     }
 
     /**

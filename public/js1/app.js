@@ -6827,35 +6827,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     this.getProfesore();
@@ -31931,7 +31902,7 @@ var render = function() {
                       _c("img", {
                         staticClass: "img-responsive",
                         attrs: {
-                          src: "imagepage/profesores" + profesore.imagen,
+                          src: "imagepage/profesores/" + profesore.imagen,
                           width: "100px",
                           height: "100px"
                         }
@@ -34771,32 +34742,21 @@ var render = function() {
   return _vm.arrayProfesore
     ? _c(
         "div",
+        { staticClass: "contenedor" },
         _vm._l(_vm.arrayProfesore, function(profesore) {
-          return _c("div", { key: profesore.id, staticClass: "staff" }, [
-            _c("div", { staticClass: "img-wrap d-flex align-items-stretch" }, [
-              _c("div", { staticClass: "img align-self-stretch" }, [
-                _c("a", { attrs: { href: "#" } }, [
-                  _c("img", {
-                    staticClass: "img-fluid ",
-                    attrs: {
-                      src: "imagepage/profesores/" + profesore.imagen,
-                      title: profesore.nombres
-                    }
-                  })
-                ])
-              ])
-            ]),
+          return _c("div", { key: profesore, staticClass: "info-pet" }, [
+            _c("img", {
+              attrs: { src: "imagepage/profesores/" + profesore.imagen }
+            }),
             _vm._v(" "),
             _c("div", { staticClass: "text pt-3 text-center" }, [
               _c("h3", [_vm._v(_vm._s(profesore.nombres))]),
               _vm._v(" "),
               _c("span", { staticClass: "position mb-2" }, [
-                _vm._v(_vm._s(profesore.curso_cargo) + " ")
+                _vm._v(" " + _vm._s(profesore.curso_cargo))
               ]),
               _vm._v(" "),
-              _c("strong", [_c("p", [_vm._v(_vm._s(profesore.nivel))])]),
-              _vm._v(" "),
-              _vm._m(0, true)
+              _c("strong", [_c("p", [_vm._v(_vm._s(profesore.nivel))])])
             ])
           ])
         }),
@@ -34804,46 +34764,7 @@ var render = function() {
       )
     : _vm._e()
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "faded" }, [
-      _c("p", [
-        _vm._v(
-          "I am an ambitious workaholic, but apart from that, pretty simple person."
-        )
-      ]),
-      _vm._v(" "),
-      _c("ul", { staticClass: "ftco-social text-center" }, [
-        _c("li", { staticClass: "ftco-animate" }, [
-          _c("a", { attrs: { href: "#" } }, [
-            _c("span", { staticClass: "icon-twitter" })
-          ])
-        ]),
-        _vm._v(" "),
-        _c("li", { staticClass: "ftco-animate" }, [
-          _c("a", { attrs: { href: "#" } }, [
-            _c("span", { staticClass: "icon-facebook" })
-          ])
-        ]),
-        _vm._v(" "),
-        _c("li", { staticClass: "ftco-animate" }, [
-          _c("a", { attrs: { href: "#" } }, [
-            _c("span", { staticClass: "icon-google-plus" })
-          ])
-        ]),
-        _vm._v(" "),
-        _c("li", { staticClass: "ftco-animate" }, [
-          _c("a", { attrs: { href: "#" } }, [
-            _c("span", { staticClass: "icon-instagram" })
-          ])
-        ])
-      ])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 

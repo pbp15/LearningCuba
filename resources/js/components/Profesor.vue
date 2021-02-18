@@ -51,7 +51,7 @@
                                     <td v-text="profesore.curso_cargo"></td>
                                           <td v-text="profesore.nivel"></td>
                                     <td>
-                                        <img :src="'imagepage/profesores' + profesore.imagen" class="img-responsive" width="100px" height="100px">
+                                        <img :src="'imagepage/profesores/' + profesore.imagen" class="img-responsive" width="100px" height="100px">
                                     </td>
                                    
                                 </tr>                                
