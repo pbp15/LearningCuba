@@ -1,11 +1,13 @@
 <div class="bg-top navbar-light  " >
 
-    <div class="container"  >       
+    <div class="container cabecera"  >       
         <div class="row no-gutters d-flex align-items-center align-items-stretch">            
             <div class="col-md-5  d-flex align-items-center py-4">
                 <img src="images/log1.jpg" class="ml-2" alt="logo eisntein" width="100px">
 
                 <a class="navbar-brand ml-3" href="#">Einstein - Tarma <span>Institución Educativa Particular </span></a>
+                
+               
             </div>
             <div class="col-md-7  d-block pl-4" >
                 <div class="row d-flex">

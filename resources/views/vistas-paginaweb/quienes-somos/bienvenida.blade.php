@@ -23,6 +23,7 @@
 	<link rel="stylesheet" href="css/flaticon.css">
 	<link rel="stylesheet" href="css/icomoon.css">
 	<link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/stilos.css">
 </head>
 
 <body>
@@ -33,10 +34,22 @@
         <section class="ftco-section testimony-section">
             <div class="container">
                 <div class="row justify-content-center mb-5 pb-2">
-                    <div class="col-md-8 text-center heading-section ftco-animate">
+                    <div class="col-md-9 text-center heading-section ftco-animate">
                         <h2 class="mb-4">Bienvenida</h2>
-                        <p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary
-                            regelialia. It is a paradisematic country</p>
+                    </div>
+                    
+                    <div class=" container text-align-left heading-section ftco-animate pl-5">
+                            Con mucha alegría y entusiasmo les damos la bienvenida a nuestra Institución Educativa Privada “EINSTEIN” </p>
+
+                            Somos una comunidad educativa al servicio de sus hijos (a), cuenta con un equipo docente de primer nivel que gestiona óptimamente los aprendizajes de cada estudiante.
+                                Colaboramos con los padres, primeros y principales educadores de sus hijos, en esta hermosa tarea, en comunicación estrecha, con las puertas siempre abiertas y en un ambiente de familiaridad.
+                                
+                               <p>Únete a la familia EINSTIANA y asegura la educación de tus hijos (a).</p>
+                            
+                           <p> Daniel Romero Zavala </p>
+                            
+                             <strong>  Promotor</strong> 
+                        </div>
                     </div>
                 </div>             
             </div>

@@ -23,8 +23,7 @@
             <div class="row d-flex justify-content-center mt-3">
               <div class="col-6">
                 <button type="submit" class="btn btn-danger px-4 ">Iniciar Sesión</button>
-               
-              </div>
+               </div>           
              
             </div>
           </div>

@@ -23,10 +23,13 @@
 	<link rel="stylesheet" href="css/flaticon.css">
 	<link rel="stylesheet" href="css/icomoon.css">
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/stilos.css">
 </head>
 
 <body>
 	<div id="app">
+	
+	<strong ><p class="titulo-einstein" >I.E.Particular "Einstein"-Tarma </p></strong> 
 
 		@include('paginaweb.header')
 
@@ -109,7 +112,7 @@
 						<h3 class="text-center"><a href="#">Inicial</a></h3>
 						<p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary
 							regelialia. It is a paradisematic country</p>
-						<p><a href="#" class="btn btn-primary">Apply now</a></p>
+						<p><a href="#" class="btn btn-primary"> Ver más </a></p>
 					</div>
 				</div>
 				<div class="col-md-3 course ftco-animate">
@@ -123,7 +126,7 @@
 						<h3 class="text-center"><a href="#">Primaria</a></h3>
 						<p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary
 							regelialia. It is a paradisematic country</p>
-						<p><a href="#" class="btn btn-primary">Apply now</a></p>
+						<p><a href="#" class="btn btn-primary">Ver más</a></p>
 					</div>
 				</div>
 				<div class="col-md-3 course ftco-animate">
@@ -137,7 +140,7 @@
 						<h3 class="text-center"><a href="#">Secundaria</a></h3>
 						<p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary
 							regelialia. It is a paradisematic country</p>
-						<p><a href="#" class="btn btn-primary">Apply now</a></p>
+						<p><a href="#" class="btn btn-primary">Ver más</a></p>
 					</div>
 				</div>
 				<div class="col-md-3 course ftco-animate">
@@ -151,7 +154,7 @@
 						<h3 class="text-center"><a href="#">Pre-Universitario</a></h3>
 						<p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary
 							regelialia. It is a paradisematic country</p>
-						<p><a href="#" class="btn btn-primary">Apply now</a></p>
+						<p><a href="#" class="btn btn-primary">Ver más</a></p>
 					</div>
 				</div>
 			</div>
@@ -165,10 +168,10 @@
 		data-stellar-background-ratio="0.5">
 		<div class="overlay"></div>
 		<div class="container">
-			<div class="row justify-content-end">
-				<div class="col-md-8 py-5 px-md-5">
+			<div class="row  justify-content-end">
+				<div class="col-md-8 py-5 px-md-5 admisions">
 					<div class="py-md-5">
-						<div class="heading-section heading-section-white ftco-animate mb-5">
+						<div class=" tituloadmin heading-section heading-section-white ftco-animate mb-5">
 							<h2 class="mb-4">Admisión 2021</h2>
 							<p>Para mayor información envianos un mensaje y nos pondremos en contacto.</p>
 						</div>
@@ -176,17 +179,22 @@
 					</div>
 				</div>
 
-				<div class=" col-md-4 py-5 px-md-5  appointment-form ftco-animate">
-					<div>
-						<div class="heading-section heading-section-white ftco-animate mb-5">
+				<div class=" banercito col-md-4 py-5 px-md-5  appointment-form ftco-animate">
+			
+						<div class="  heading-section heading-section-white ftco-animate mb-5">
 							<h2 class="mb-4">Ubicanos en :</h2>
-							<p>Para mayor información envianos un mensaje y nos pondremos en contacto.</p>
+							<strong><p class="text-center">Jr. Lima Nº750 - Tarma - frente a Comercial Chichos </p></strong>
 						</div>
-						<iframe
-							src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7821.666757610077!2d-75.691027!3d-11.419637!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x910920bffe946633%3A0xc48381d681cefbea!2sJr.%20Lima%20750%2C%20Tarma%2012651!5e0!3m2!1ses-419!2spe!4v1585178786594!5m2!1ses-419!2spe"
-							width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
-							tabindex="0"></iframe>
-					</div>
+
+						<div class=" mapita heading-section heading-section-white ftco-animate mb-5">
+							<iframe
+								src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7821.666757610077!2d-75.691027!3d-11.419637!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x910920bffe946633%3A0xc48381d681cefbea!2sJr.%20Lima%20750%2C%20Tarma%2012651!5e0!3m2!1ses-419!2spe!4v1585178786594!5m2!1ses-419!2spe"
+								width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+								tabindex="0">
+							</iframe>
+						</div>
+					
+					
 				</div>
 			</div>
 	</section>

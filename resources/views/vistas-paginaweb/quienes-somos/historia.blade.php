@@ -23,6 +23,7 @@
 	<link rel="stylesheet" href="css/flaticon.css">
 	<link rel="stylesheet" href="css/icomoon.css">
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/stilos.css">
 </head>
 
 <body>
@@ -35,8 +36,7 @@
                 <div class="row justify-content-center mb-5 pb-2">
                     <div class="col-md-8 text-center heading-section ftco-animate">
                         <h2 class="mb-4">Nuestra Historia</h2>
-                        <p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary
-                            regelialia. It is a paradisematic country</p>
+                        <p>-------------------</p>
                     </div>
                 </div>             
             </div>

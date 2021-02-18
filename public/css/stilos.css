@@ -1,0 +1,54 @@
+.cabecera {
+    background: rgb(245, 240, 242);
+}
+
+
+
+@media screen and (max-width:960px) { 
+ 
+
+    .mapita {
+        display: none;
+    }
+    .banercito {
+        display: none;
+    }
+    .admisions {
+        /* padding-right: 50px; */
+    
+        display: flex;
+       margin-right: 15%;
+        /* border: 4px solid red; */
+    }
+    .tituloadmin {
+        text-align: center;
+    }
+   
+}
+
+@media screen and (max-width:720px) { 
+    .titulo-einstein {
+        display: block;
+        text-align: center;
+        background: #cecdd493;
+        margin-top: 50px;
+        color: rgb(8, 15, 36);
+        font-size: 27px;
+        }
+
+        .cabecera {
+            display: none;
+
+         }
+
+}
+
+
+@media screen and (min-width:721px) { 
+    .titulo-einstein {
+        display: none;
+    }
+    .cabecera {
+        display: block;
+    }
+}

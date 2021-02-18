@@ -15,10 +15,13 @@ use Illuminate\Support\Facades\Route;
 
 Route::group(['middleware' => ['guest']], function(){
 
-    Route::get('/','Auth\LoginController@showLoginForm')->name('defect');
+    // Route::get('/','Auth\LoginController@showLoginForm')->name('defect');
+    Route::get('/','PaginaController@inicio')->name('page');
+
+    Route::get('/loginCli','Auth\LoginController@showLoginForm')->name('defect');
     Route::post('/login', 'Auth\LoginController@login')->name('login');
     /* VISTAS DE PAGINA WEB */
-    Route::get('/page','PaginaController@inicio')->name('page');
+
     Route::get('/inicial','PaginaController@nivelinicial')->name('nivel-inicial');
 
     //MENU DE COMUNIDAD
