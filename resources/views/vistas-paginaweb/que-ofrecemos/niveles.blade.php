@@ -53,7 +53,7 @@
                             <h3 class="text-center"><a href="#">Inicial</a></h3>
                             <p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary
                                 regelialia. It is a paradisematic country</p>
-                            <p><a href="{{route('inicial')}}" class="btn btn-primary">Apply now</a></p>
+                            <p><a href="{{route('inicial')}}" class="btn btn-primary">Ver más</a></p>
                         </div>
                     </div>
                     <div class="col-md-3 course ftco-animate">
@@ -67,7 +67,7 @@
                             <h3 class="text-center"><a href="#">Primaria</a></h3>
                             <p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary
                                 regelialia. It is a paradisematic country</p>
-                            <p><a href="{{route('primaria')}}" class="btn btn-primary">Apply now</a></p>
+                            <p><a href="{{route('primaria')}}" class="btn btn-primary">Ver más</a></p>
                         </div>
                     </div>
                     <div class="col-md-3 course ftco-animate">
@@ -81,7 +81,7 @@
                             <h3 class="text-center"><a href="#">Secundaria</a></h3>
                             <p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary
                                 regelialia. It is a paradisematic country</p>
-                            <p><a href="{{route('secundaria')}}" class="btn btn-primary">Apply now</a></p>
+                            <p><a href="{{route('secundaria')}}" class="btn btn-primary">Ver más</a></p>
                         </div>
                     </div>
                     <div class="col-md-3 course ftco-animate">
@@ -95,7 +95,7 @@
                             <h3 class="text-center"><a href="#">Pre-Universitario</a></h3>
                             <p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary
                                 regelialia. It is a paradisematic country</p>
-                            <p><a href="#" class="btn btn-primary">Apply now</a></p>
+                            <p><a href="#" class="btn btn-primary">Ver más</a></p>
                         </div>
                     </div>
                 </div>

@@ -30,7 +30,7 @@
 	<div id="app">
 
         @include('paginaweb.header')
-        <section class="ftco-section testimony-section">
+        <section class="ftco-section bg-light">
             <div class="container">
                 <div class="row justify-content-center mb-5 pb-2">
                     <div class="col-md-8 text-center heading-section ftco-animate">
@@ -39,8 +39,13 @@
                             regelialia. It is a paradisematic country</p>
                     </div>
                 </div>             
+          
+            <div class="row">
+            
+                <noticita></noticita>
+
             </div>
-        
+        </div>
         </section>
         @include('paginaweb.footer')
 

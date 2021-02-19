@@ -40,7 +40,7 @@
                             regelialia. It is a paradisematic country</p>
                     </div>
                 </div>	
-    
+           
     
                 <div class="row">
             

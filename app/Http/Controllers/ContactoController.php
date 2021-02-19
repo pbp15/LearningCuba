@@ -59,4 +59,9 @@ class ContactoController extends Controller
         $contacto->save();
     }
 
+    public function destroy(Request $request){
+        $contacto=Contacto::findOrFail($request->id);
+        $contacto->delete();
+    }
+
 }

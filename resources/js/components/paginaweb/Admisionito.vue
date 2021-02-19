@@ -51,9 +51,9 @@
 								</div>
 							</div>
                           <div class="d-md-flex">
-                                <div v-show="errorContacto" class="form-group row div-error">
+                                <div v-show="errorAdmision" class="form-group row div-error">
                                     <div class="text-center text-error">
-                                        <div v-for="error in errorMostrarMsjContacto" :key="error" v-text="error">
+                                        <div v-for="error in errorMostrarMsjAdmision" :key="error" v-text="error">
 
                                         </div>
                                     </div>
@@ -67,66 +67,76 @@
 
 
 <script>
-    // export default {
-    //        data (){
-    //         return {           
-    //             apellidos : '',
-    //             nombres : '',
-    //             email : '',
-    //             telefono : '',
-    //             asunto : '',
-    //             arrayContacto : [],
-    //             errorContacto : 0,
-    //             errorMostrarMsjContacto : [],
-    //         }
-    //     },
+    export default {
+           data (){
+            return {           
+                 nombres_apo : '',
+                 dni_apo : '',
+                nombres_estud : '',
+                 dndni_estud : '',
+                telefono : '',                
+                email : '',
+                nivel : '',
+                arrayAdmision : [],
+                errorAdmision : 0,
+                errorMostrarMsjAdmision : [],
+            }
+        },
 
 
   
-    //     methods: {
+        methods: {
        
-    //         registrarContacto(){
+            registrarAdmision(){
                       
-    //             let me = this;
+                let me = this;
 
-    //             axios.post('/contacto/registrar',{
-    //                 'apellidos': this.apellidos,
-    //                 'nombres': this.nombres,
-    //                 'email': this.email,
-    //                 'telefono': this.telefono,
-    //                 'asunto': this.asunto
-    //             }).then(function (response) {
-    //                     swal(
-    //                     'Registrado!',
-    //                     'Gracias por Contactarnos, pronto le escribiremos',
-    //                     'success'
-    //                     )
-    //                 me.cerrarModal();
-    //             }).catch(function (error) {
-    //                  swal(
-    //                     'Registro incorrecto!',
-    //                     'Todos los Campos son Obligatorios',
-    //                     'error'
-    //                     )
-    //                 console.log(error);
-    //             });
-    //         },
-    //                 cerrarModal(){
-    //             this.apellidos = '';
-    //             this.nombres = '';
-    //             this.email = 0;
-    //             this.telefono = 0;
-    //             this.asunto = '';
-	// 	        this.errorContacto=0;
-    //         },
-
-
-    //     },
+                axios.post('/admision/registrar',{
+                    'nombres_apo': this.nombres_apo,
+                    'dni_apo': this.dni_apo,
+                    'nombres_estud': this.nombres_estud,
+                    'dni_estud': this.dni_estud,              
+                    'telefono': this.telefono,
+                    'email': this.email,
+                    'nivel': this.nivel,
+                }).then(function (response) {
+                    me.correctoRegistro();
+                    me.cerrarModal();
+                }).catch(function (error) {
+                     swal(
+                        'Registro incorrecto!',
+                        'Todos los Campos son Obligatorios',
+                        'error'
+                        )
+                    console.log(error);
+                });
+            },
+         cerrarModal(){             
+                this.nombres_apo = '';
+                this.dni_apo = '';
+                this.nombres_estud = '';
+                this.dni_estud = '';  
+                this.telefono = 0;
+                this.email = 0;
+                this.nivel= '';
+		        this.errorAdmision=0;
+            },
         
-    //       mounted() {
-    //       this.registrarContacto();
-    //     },
-    // }
+        correctoRegistro(){
+                swal(  
+                        'Registrado!',
+                        'Gracias por Contactarnos, pronto le escribiremos',
+                        'success'
+                     )
+        },
+
+
+        },
+        
+          mounted() {
+          this.registrarAdmision();
+        },
+    }
 </script>
 
 

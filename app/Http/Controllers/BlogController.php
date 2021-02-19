@@ -42,8 +42,12 @@ class BlogController extends Controller
      }
      
      public function getDatos(){
-         $blogs = Blog::orderBy('id','asc')->get();
+         $blogs = Blog::join('categorias','blogs.idcategoria','=','categorias.id')
+         ->select('blogs.id','blogs.idcategoria','blogs.titulo','blogs.imagen','categorias.nombre as nombre_categoria','blogs.fecha','blogs.descripcion')
+         ->orderBy('blogs.id', 'desc')->get();
          return [ 'blogs' => $blogs];
+
+         
      }
      
      public function store(Request $request)

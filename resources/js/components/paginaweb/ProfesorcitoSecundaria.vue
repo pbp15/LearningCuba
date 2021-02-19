@@ -15,28 +15,28 @@
       
     </template>
 
-<script>
-    export default {
-        mounted() {
-            this.getProfesore()
-        },
-        data() {
-            return {
-                    arrayProfesore:[]
-            }
-        },
-        methods: {
-            getProfesore(){
-                let me = this;
-                var url = '/profesores/inicial';
-                axios.get(url).then((Response)=>{
-                  //  console.log(Response);
-                   
-                    me.arrayProfesore=Response.data.profesores;
-                }).catch((error)=>{
-                    console.log(error)
-                })
-            }
-        },
-    }
+    <script>
+        export default {
+            mounted() {
+                this.getProfesore()
+            },
+            data() {
+                return {
+                        arrayProfesore:[]
+                }
+            },
+            methods: {
+                getProfesore(){
+                    let me = this;
+                    var url = '/profesores/secundaria';
+                    axios.get(url).then((Response)=>{
+                    //  console.log(Response);
+                    
+                        me.arrayProfesore=Response.data.profesores;
+                    }).catch((error)=>{
+                        console.log(error)
+                    })
+                }
+            },
+        }
 </script>

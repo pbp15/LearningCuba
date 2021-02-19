@@ -43,7 +43,7 @@ Route::group(['middleware' => ['guest']], function(){
     // MENU ADMISION
     Route::get('/ficha','PaginaController@ficha')->name('ficha');
     Route::get('/requisitos','PaginaController@requisitos')->name('requisitos');
-    Route::get('/admision','PaginaController@admision')->name('admision');
+    Route::get('/admision2021','PaginaController@admision')->name('admision');
 
     //MENU CONTACTANOS
     Route::get('/contactanos','PaginaController@contactanos')->name('contactanos');
@@ -55,12 +55,18 @@ Route::group(['middleware' => ['guest']], function(){
 
     /* METODOS DE PAGINA WEB */
     Route::get('/evento/show','EventoController@getDatos');
-    Route::get('/testimonio/show','TestimonioController@getDatos');    
+    Route::get('/testimonio/show','TestimonioController@getDatos'); 
+    Route::get('/blog/show','BlogController@getDatos');   
+    Route::get('/noticia/show','NoticiaController@getDatos'); 
+
     Route::post('/contacto/registrar', 'ContactoController@store');
+    Route::post('/admision/registrar', 'AdmisionController@store');
+
     Route::get('/profesores/inicial','ProfesoreController@getDatosInicial')->name('profesoresinicial');  
     Route::get('/profesores/primaria','ProfesoreController@getDatosPrimaria')->name('profesores-primaria');
     Route::get('/profesores/secundaria','ProfesoreController@getDatosSecundaria')->name('profesores-secundaria');
    
+    // METODO BLOG 
 
 });
 
@@ -146,6 +152,14 @@ Route::group(['middleware' => ['auth']], function(){
         Route::post('/blog/registrar', 'BlogController@store');
         Route::put('/blog/actualizar', 'BlogController@update');
         Route::put('/blog/eliminar', 'BlogController@destroy');
+
+        Route::get('/admision','AdmisionController@index');
+        Route::put('/admision/actualizar', 'AdmisionController@update');
+        Route::put('/admision/eliminar', 'AdmisionController@destroy');
+
+        Route::get('/contacto','ContactoController@index');
+        Route::put('/contacto/actualizar', 'ContactoController@update');
+        Route::put('/contacto/eliminar', 'ContactoController@destroy');
     });
         
 });

@@ -45,6 +45,9 @@
                                         <button type="button" @click="abrirModal('contacto','actualizar',contacto)" class="btn btn-warning btn-sm">
                                           <i class="icon-pencil"></i>
                                         </button> 
+                                        <button type="button" class="btn btn-danger btn-sm" @click="eliminarContacto(contacto.id)">
+                                        <i class="fa fa-trash"></i>
+                                        </button>
                                     </td>                                   
                                     <td v-text="contacto.apellidos"></td>
                                     <td v-text="contacto.nombres"></td>
@@ -284,6 +287,47 @@
                 this.telefono = 0;
                 this.asunto = '';
 		        this.errorContacto=0;
+            },
+
+            eliminarContacto(id){
+            
+             swal({
+                title: 'Esta seguro de eliminar este formulario de contacto?',
+                type: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Aceptar!',
+                cancelButtonText: 'Cancelar',
+                confirmButtonClass: 'btn btn-success',
+                cancelButtonClass: 'btn btn-danger',
+                buttonsStyling: false,
+                reverseButtons: true
+                }).then((result) => {
+                if (result.value) {
+                    let me = this;
+
+                    axios.put('/contacto/eliminar',{
+                        'id': id
+                    }).then(function (response) {
+                        me.listarEvento(1,'','titulo');
+                        swal(
+                        'Eliminado!',
+                        'El formulario de contacto ha sido eliminado con éxito.',
+                        'success'
+                        )
+                    }).catch(function (error) {
+                        console.log(error);
+                    });
+                    
+                    
+                } else if (
+                    // Read more about handling dismissals
+                    result.dismiss === swal.DismissReason.cancel
+                ) {
+                    
+                }
+                }) 
             },
             abrirModal(modelo, accion, data = []){
                 switch(modelo){

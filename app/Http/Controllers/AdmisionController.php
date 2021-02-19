@@ -7,79 +7,65 @@ use Illuminate\Http\Request;
 
 class AdmisionController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
+    public function index(Request $request)
     {
-        //
+        $buscar = $request->buscar;
+        $criterio = $request->criterio;
+        
+        if ($buscar==''){
+            $admisiones = Admision::orderBy('id', 'desc')->paginate(3);
+        }
+        else{
+            $admisiones = Admision::where($criterio, 'like', '%'. $buscar . '%')->orderBy('id', 'desc')->paginate(3);
+        }
+        
+    
+        return [
+            'pagination' => [
+                'total'        => $admisiones->total(),
+                'current_page' => $admisiones->currentPage(),
+                'per_page'     => $admisiones->perPage(),
+                'last_page'    => $admisiones->lastPage(),
+                'from'         => $admisiones->firstItem(),
+                'to'           => $admisiones->lastItem(),
+            ],
+            'admisiones' => $admisiones
+        ];
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
+   
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+    
     public function store(Request $request)
     {
-        //
+        if (!$request->ajax()) return redirect('/');
+        $admisione = new Admision();
+        $admisione->nombres_apo = $request->nombres_apo;
+        $admisione->dni_apo = $request->dni_apo;
+        $admisione->nombres_estud = $request->nombres_estud;
+        $admisione->dni_estud = $request->dni_estud; 
+        $admisione->telefono = $request->telefono;
+        $admisione->email = $request->email;
+        $admisione->nivel = $request->nivel;
+        $admisione->save();
+    }
+    public function update(Request $request)
+    {
+        if (!$request->ajax()) return redirect('/');
+        $admisione = Admision::findOrFail($request->id);
+        $admisione->nombres_apo = $request->nombres_apo;
+        $admisione->dni_apo = $request->dni_apo;
+        $admisione->nombres_estud = $request->nombres_estud;
+        $admisione->dni_estud = $request->dni_estud; 
+        $admisione->telefono = $request->telefono;
+        $admisione->email = $request->email;
+        $admisione->nivel = $request->nivel;
+        $admisione->save();
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Admision  $admision
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Admision $admision)
-    {
-        //
+    public function destroy(Request $request){
+        $admisione=Admision::findOrFail($request->id);
+        $admisione->delete();
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Admision  $admision
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Admision $admision)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Admision  $admision
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Admision $admision)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Admision  $admision
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Admision $admision)
-    {
-        //
-    }
 }

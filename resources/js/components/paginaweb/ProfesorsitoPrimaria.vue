@@ -28,7 +28,7 @@
         methods: {
             getProfesore(){
                 let me = this;
-                var url = '/profesores/inicial';
+                var url = '/profesores/primaria';
                 axios.get(url).then((Response)=>{
                   //  console.log(Response);
                    
