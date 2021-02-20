@@ -46,7 +46,7 @@
                                     <div class="icon mt-2 d-flex justify-content-center align-items-center"><span
                                             class="flaticon-security"></span></div>
                                     <div class="text pl-3">
-                                        <h3>Seguridad primero</h3>
+                                        <h3>Clases 100% virtuales</h3>
                                         <p>Far far away, behind the word mountains, far from the countries Vokalia.</p>
                                     </div>
                                 </div>
@@ -56,7 +56,7 @@
                                     <div class="icon mt-2 d-flex justify-content-center align-items-center"><span
                                             class="flaticon-reading"></span></div>
                                     <div class="text pl-3">
-                                        <h3>Clases regulares</h3>
+                                        <h3>Plataformas virtuales</h3>
                                         <p>Far far away, behind the word mountains, far from the countries Vokalia.</p>
                                     </div>
                                 </div>
@@ -66,7 +66,7 @@
                                     <div class="icon mt-2 d-flex justify-content-center align-items-center"><span
                                             class="flaticon-diploma"></span></div>
                                     <div class="text pl-3">
-                                        <h3>Maestros calificados</h3>
+                                        <h3>Docentes calificados</h3>
                                         <p>Far far away, behind the word mountains, far from the countries Vokalia.</p>
                                     </div>
                                 </div>
@@ -76,7 +76,7 @@
                                     <div class="icon mt-2 d-flex justify-content-center align-items-center"><span
                                             class="flaticon-education"></span></div>
                                     <div class="text pl-3">
-                                        <h3>Infraestrutura de Calidad</h3>
+                                        <h3>Computación y TIC's</h3>
                                         <p>Far far away, behind the word mountains, far from the countries Vokalia.</p>
                                     </div>
                                 </div>
@@ -86,7 +86,7 @@
                                     <div class="icon mt-2 d-flex justify-content-center align-items-center"><span
                                             class="flaticon-jigsaw"></span></div>
                                     <div class="text pl-3">
-                                        <h3>Talleres </h3>
+                                        <h3>Departamento de Psicología </h3>
                                         <p>Far far away, behind the word mountains, far from the countries Vokalia.</p>
                                     </div>
                                 </div>
@@ -96,7 +96,7 @@
                                     <div class="icon mt-2 d-flex justify-content-center align-items-center"><span
                                             class="flaticon-kids"></span></div>
                                     <div class="text pl-3">
-                                        <h3>Instalaciones Deportivas</h3>
+                                        <h3>Talleres Deportivos</h3>
                                         <p>Far far away, behind the word mountains, far from the countries Vokalia.</p>
                                     </div>
                                 </div>

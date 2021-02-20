@@ -101,15 +101,15 @@
                     'telefono': this.telefono,
                     'email': this.email,
                     'nivel': this.nivel,
-                }).then(function (response) { 
-                  // alert("El formulario se registro con éxito");  
-                     console.log(response);           
+                }).then(function (response) {                 
+                    console.log("se registro con éxito");
                     me.cerrarModal();
                 }).catch(function (error) {    
                   //   alert("Vuelva a registrar el formulario ");                   
                     console.log(error);
                 });
             },
+        
          cerrarModal(){             
                 this.nombres_apo = '';
                 this.dni_apo = '';

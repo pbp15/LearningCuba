@@ -68,14 +68,41 @@
                         <h1>Escritorio</h1>           
                     </template>
                     <template  v-if="menu==1">
-                    </template>   
+                        <categoria></categoria>
+                    </template>
+
+                    <template  v-if="menu==2">
+                           <blog></blog>
+                    </template>
+
+                    <template  v-if="menu==3">
+                        <evento></evento>
+                    </template>
+
+                    <template  v-if="menu==4">
+                        <noticia></noticia>
+                    </template>
 
                     <template  v-if="menu==5">
+                        <comunicado></comunicado>
                     </template>
 
                     <template  v-if="menu==6">
+                        <testimonio></testimonio>
                     </template>
 
+                    <template  v-if="menu==7">
+                        <profesor></profesor>
+                    </template>
+
+                    <template  v-if="menu==8">
+                        <contacto></contacto>
+                    </template>
+
+                    <template  v-if="menu==9">
+                        <admision></admision>
+                    </template>
+            
             
             <!-- /Fin del contenido principal -->
             @elseif (Auth::user()->idrol == 3)
@@ -84,22 +111,59 @@
                         <h1>Escritorio</h1>           
                     </template>
 
+                    <template  v-if="menu==1">
+                        <categoria></categoria>
+                    </template>
+
+                    <template  v-if="menu==2">
+                           <blog></blog>
+                    </template>
+
+                    <template  v-if="menu==3">
+                        <evento></evento>
+                    </template>
+
+                    <template  v-if="menu==4">
+                        <noticia></noticia>
+                    </template>
+
                     <template  v-if="menu==5">
+                        <comunicado></comunicado>
                     </template>
 
                     <template  v-if="menu==6">
+                        <testimonio></testimonio>
                     </template>
-            
+
+                    <template  v-if="menu==7">
+                        <profesor></profesor>
+                    </template>
+
+                    <template  v-if="menu==8">
+                        <contacto></contacto>
+                    </template>
+
+                    <template  v-if="menu==9">
+                        <admision></admision>
+                    </template>
+                    
+                    <template  v-if="menu==10">
+                        <persona></persona> 
+                  </template>
+
+                  <template  v-if="menu==11">
+                     <rol></rol> 
+                  </template>
+
+                  <template  v-if="menu==12">
+                      <user></user> 
+                  </template> 
+
             @elseif (Auth::user()->idrol == 4)
                     <template  v-if="menu==0">
                         <h1>Escritorio</h1>           
                     </template>
 
-                    <template  v-if="menu==5">
-                    </template>
-
-                    <template  v-if="menu==6">
-                    </template>
             @else
 
       @endif

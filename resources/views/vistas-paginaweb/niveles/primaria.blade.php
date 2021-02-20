@@ -41,7 +41,7 @@
 
 
              <profesorsito-primaria></profesorsito-primaria>
- </section>
+        </section>
         @include('paginaweb.footer')
 
     </div>

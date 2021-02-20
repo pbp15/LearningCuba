@@ -63,8 +63,8 @@ Route::group(['middleware' => ['guest']], function(){
     Route::post('/admision/registrar', 'AdmisionController@store');
 
     Route::get('/profesores/inicial','ProfesoreController@getDatosInicial')->name('profesoresinicial');  
-    Route::get('/profesores/primaria','ProfesoreController@getDatosPrimaria')->name('profesores-primaria');
-    Route::get('/profesores/secundaria','ProfesoreController@getDatosSecundaria')->name('profesores-secundaria');
+    Route::get('/profesores/primaria','ProfesoreController@getDatosPrimaria')->name('profesoresprimaria');
+    Route::get('/profesores/secundaria','ProfesoreController@getDatosSecundaria')->name('profesoressecundaria');
    
     // METODO BLOG 
 
@@ -79,14 +79,126 @@ Route::group(['middleware' => ['auth']], function(){
         return view('contenido/contenido');
     })->name('main');
 
-    Route::group(['middleware' => ['Gerente']], function(){
-   
+    Route::group(['middleware' => ['Promotor']], function(){
+
+        Route::get('/user', 'UserController@index');
+        Route::post('/user/registrar', 'UserController@store');
+        Route::put('/user/actualizar', 'UserController@update');
+        Route::put('/user/desactivar', 'UserController@desactivar');
+        Route::put('/user/activar', 'UserController@activar');
+
+        Route::get('/rol', 'RolController@index');
+        Route::get('/rol/selectRol', 'RolController@selectRol');        
+        
+        Route::get('/persona', 'PersonaController@index');
+        Route::post('/persona/registrar', 'PersonaController@store');
+        Route::put('/persona/actualizar', 'PersonaController@update');
+        
+        Route::get('/categoria', 'CategoriaController@index');
+        Route::post('/categoria/registrar', 'CategoriaController@store');
+        Route::put('/categoria/actualizar', 'CategoriaController@update');
+        Route::put('/categoria/desactivar', 'CategoriaController@desactivar');
+        Route::put('/categoria/activar', 'CategoriaController@activar');
+        Route::get('/categoria/selectCategoria', 'CategoriaController@selectCategoria');
+
+        Route::get('/evento','EventoController@index');
+        Route::post('/evento/registrar', 'EventoController@store');
+        Route::put('/evento/actualizar', 'EventoController@update');
+        Route::put('/evento/eliminar', 'EventoController@destroy');
+
+        
+        Route::get('/comunicado','ComunicadoController@index');
+        Route::post('/comunicado/registrar', 'ComunicadoController@store');
+        Route::put('/comunicado/actualizar', 'ComunicadoController@update');
+        Route::put('/comunicado/eliminar', 'ComunicadoController@destroy');
+
+        Route::get('/testimonio','TestimonioController@index');
+        Route::post('/testimonio/registrar', 'TestimonioController@store');
+        Route::put('/testimonio/actualizar', 'TestimonioController@update');
+        Route::put('/testimonio/eliminar', 'TestimonioController@destroy');
+
+        
+        Route::get('/noticia','NoticiaController@index');
+        Route::post('/noticia/registrar', 'NoticiaController@store');
+        Route::put('/noticia/actualizar', 'NoticiaController@update');
+        Route::put('/noticia/eliminar', 'NoticiaController@destroy');
+
+        
+        Route::get('/profesor','ProfesoreController@index');
+        Route::post('/profesor/registrar', 'ProfesoreController@store');
+        Route::put('/profesor/actualizar', 'ProfesoreController@update');
+        Route::put('/profesor/eliminar', 'ProfesoreController@destroy');
+
+
+        
+        Route::get('/blog','BlogController@index');
+        Route::post('/blog/registrar', 'BlogController@store');
+        Route::put('/blog/actualizar', 'BlogController@update');
+        Route::put('/blog/eliminar', 'BlogController@destroy');
+
+        Route::get('/admision','AdmisionController@index');
+        Route::put('/admision/actualizar', 'AdmisionController@update');
+        Route::put('/admision/eliminar', 'AdmisionController@destroy');
+
+        Route::get('/contacto','ContactoController@index');
+        Route::put('/contacto/actualizar', 'ContactoController@update');
+        Route::put('/contacto/eliminar', 'ContactoController@destroy');
     
     });
 
 
     Route::group(['middleware' => ['Secretaria']], function(){
-           /*Expediente*/
+           
+        
+        Route::get('/categoria', 'CategoriaController@index');
+        Route::post('/categoria/registrar', 'CategoriaController@store');
+        Route::put('/categoria/actualizar', 'CategoriaController@update');
+        Route::put('/categoria/desactivar', 'CategoriaController@desactivar');
+        Route::put('/categoria/activar', 'CategoriaController@activar');
+        Route::get('/categoria/selectCategoria', 'CategoriaController@selectCategoria');
+
+        Route::get('/evento','EventoController@index');
+        Route::post('/evento/registrar', 'EventoController@store');
+        Route::put('/evento/actualizar', 'EventoController@update');
+        Route::put('/evento/eliminar', 'EventoController@destroy');
+
+        
+        Route::get('/comunicado','ComunicadoController@index');
+        Route::post('/comunicado/registrar', 'ComunicadoController@store');
+        Route::put('/comunicado/actualizar', 'ComunicadoController@update');
+        Route::put('/comunicado/eliminar', 'ComunicadoController@destroy');
+
+        Route::get('/testimonio','TestimonioController@index');
+        Route::post('/testimonio/registrar', 'TestimonioController@store');
+        Route::put('/testimonio/actualizar', 'TestimonioController@update');
+        Route::put('/testimonio/eliminar', 'TestimonioController@destroy');
+
+        
+        Route::get('/noticia','NoticiaController@index');
+        Route::post('/noticia/registrar', 'NoticiaController@store');
+        Route::put('/noticia/actualizar', 'NoticiaController@update');
+        Route::put('/noticia/eliminar', 'NoticiaController@destroy');
+
+        
+        Route::get('/profesor','ProfesoreController@index');
+        Route::post('/profesor/registrar', 'ProfesoreController@store');
+        Route::put('/profesor/actualizar', 'ProfesoreController@update');
+        Route::put('/profesor/eliminar', 'ProfesoreController@destroy');
+
+
+        
+        Route::get('/blog','BlogController@index');
+        Route::post('/blog/registrar', 'BlogController@store');
+        Route::put('/blog/actualizar', 'BlogController@update');
+        Route::put('/blog/eliminar', 'BlogController@destroy');
+
+        Route::get('/admision','AdmisionController@index');
+        Route::put('/admision/actualizar', 'AdmisionController@update');
+        Route::put('/admision/eliminar', 'AdmisionController@destroy');
+
+        Route::get('/contacto','ContactoController@index');
+        Route::put('/contacto/actualizar', 'ContactoController@update');
+        Route::put('/contacto/eliminar', 'ContactoController@destroy');
 
     });
 

@@ -6669,8 +6669,7 @@ __webpack_require__.r(__webpack_exports__);
         'email': this.email,
         'nivel': this.nivel
       }).then(function (response) {
-        // alert("El formulario se registro con éxito");  
-        console.log(response);
+        console.log("se registro con éxito");
         me.cerrarModal();
       })["catch"](function (error) {
         //   alert("Vuelva a registrar el formulario ");                   
@@ -7042,6 +7041,108 @@ __webpack_require__.r(__webpack_exports__);
     getProfesore: function getProfesore() {
       var me = this;
       var url = '/profesores/inicial';
+      axios.get(url).then(function (Response) {
+        //  console.log(Response);
+        me.arrayProfesore = Response.data.profesores;
+      })["catch"](function (error) {
+        console.log(error);
+      });
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/paginaweb/ProfesorsitoPrimaria.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/paginaweb/ProfesorsitoPrimaria.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  mounted: function mounted() {
+    this.getProfesore();
+  },
+  data: function data() {
+    return {
+      arrayProfesore: []
+    };
+  },
+  methods: {
+    getProfesore: function getProfesore() {
+      var me = this;
+      var url = '/profesores/primaria';
+      axios.get(url).then(function (Response) {
+        //  console.log(Response);
+        me.arrayProfesore = Response.data.profesores;
+      })["catch"](function (error) {
+        console.log(error);
+      });
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/paginaweb/ProfesorsitoSecundaria.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/paginaweb/ProfesorsitoSecundaria.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  mounted: function mounted() {
+    this.getProfesore();
+  },
+  data: function data() {
+    return {
+      arrayProfesore: []
+    };
+  },
+  methods: {
+    getProfesore: function getProfesore() {
+      var me = this;
+      var url = '/profesores/secundaria';
       axios.get(url).then(function (Response) {
         //  console.log(Response);
         me.arrayProfesore = Response.data.profesores;
@@ -56642,7 +56743,12 @@ var render = function() {
             }
           ],
           staticClass: "form-control",
-          attrs: { type: "text", placeholder: "Apellidos" },
+          attrs: {
+            type: "text",
+            placeholder: "Apellidos",
+            required: "",
+            maxlength: "100"
+          },
           domProps: { value: _vm.apellidos },
           on: {
             input: function($event) {
@@ -56666,7 +56772,12 @@ var render = function() {
             }
           ],
           staticClass: "form-control",
-          attrs: { type: "text", placeholder: "Nombres" },
+          attrs: {
+            type: "text",
+            placeholder: "Nombres",
+            required: "",
+            maxlength: "100"
+          },
           domProps: { value: _vm.nombres },
           on: {
             input: function($event) {
@@ -56692,7 +56803,13 @@ var render = function() {
             }
           ],
           staticClass: "form-control",
-          attrs: { type: "number", placeholder: "Celular" },
+          attrs: {
+            type: "number",
+            placeholder: "Celular",
+            required: "",
+            minlength: "9",
+            maxlength: "9"
+          },
           domProps: { value: _vm.telefono },
           on: {
             input: function($event) {
@@ -56716,7 +56833,7 @@ var render = function() {
             }
           ],
           staticClass: "form-control",
-          attrs: { type: "email", placeholder: " Email" },
+          attrs: { type: "email", placeholder: " Email", required: "" },
           domProps: { value: _vm.email },
           on: {
             input: function($event) {
@@ -56742,7 +56859,13 @@ var render = function() {
             }
           ],
           staticClass: "form-control",
-          attrs: { cols: "30", rows: "2", placeholder: "Asunto" },
+          attrs: {
+            cols: "30",
+            rows: "2",
+            placeholder: "Asunto",
+            required: "",
+            maxlength: "300"
+          },
           domProps: { value: _vm.asunto },
           on: {
             input: function($event) {
@@ -56896,6 +57019,100 @@ render._withStripped = true
 /*!********************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/paginaweb/ProfesorsitoInicial.vue?vue&type=template&id=195077de& ***!
   \********************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm.arrayProfesore
+    ? _c(
+        "div",
+        { staticClass: "contenedor" },
+        _vm._l(_vm.arrayProfesore, function(profesore) {
+          return _c("div", { key: profesore.id, staticClass: "info-pet" }, [
+            _c("img", {
+              attrs: { src: "imagepage/profesores/" + profesore.imagen }
+            }),
+            _vm._v(" "),
+            _c("div", { staticClass: "text pt-3 text-center" }, [
+              _c("h3", [_vm._v(_vm._s(profesore.nombres))]),
+              _vm._v(" "),
+              _c("span", { staticClass: "position mb-2" }, [
+                _vm._v(" " + _vm._s(profesore.curso_cargo))
+              ]),
+              _vm._v(" "),
+              _c("strong", [_c("p", [_vm._v(_vm._s(profesore.nivel))])])
+            ])
+          ])
+        }),
+        0
+      )
+    : _vm._e()
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/paginaweb/ProfesorsitoPrimaria.vue?vue&type=template&id=b2adb9d4&":
+/*!*********************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/paginaweb/ProfesorsitoPrimaria.vue?vue&type=template&id=b2adb9d4& ***!
+  \*********************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm.arrayProfesore
+    ? _c(
+        "div",
+        { staticClass: "contenedor" },
+        _vm._l(_vm.arrayProfesore, function(profesore) {
+          return _c("div", { key: profesore.id, staticClass: "info-pet" }, [
+            _c("img", {
+              attrs: { src: "imagepage/profesores/" + profesore.imagen }
+            }),
+            _vm._v(" "),
+            _c("div", { staticClass: "text pt-3 text-center" }, [
+              _c("h3", [_vm._v(_vm._s(profesore.nombres))]),
+              _vm._v(" "),
+              _c("span", { staticClass: "position mb-2" }, [
+                _vm._v(" " + _vm._s(profesore.curso_cargo))
+              ]),
+              _vm._v(" "),
+              _c("strong", [_c("p", [_vm._v(_vm._s(profesore.nivel))])])
+            ])
+          ])
+        }),
+        0
+      )
+    : _vm._e()
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/paginaweb/ProfesorsitoSecundaria.vue?vue&type=template&id=d304a0ac&":
+/*!***********************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/paginaweb/ProfesorsitoSecundaria.vue?vue&type=template&id=d304a0ac& ***!
+  \***********************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -69238,6 +69455,8 @@ Vue.component('testimonito', __webpack_require__(/*! ./components/paginaweb/Test
 Vue.component('formularito', __webpack_require__(/*! ./components/paginaweb/Formularito.vue */ "./resources/js/components/paginaweb/Formularito.vue")["default"]);
 Vue.component('admisionito', __webpack_require__(/*! ./components/paginaweb/Admisionito.vue */ "./resources/js/components/paginaweb/Admisionito.vue")["default"]);
 Vue.component('profesorsito-inicial', __webpack_require__(/*! ./components/paginaweb/ProfesorsitoInicial.vue */ "./resources/js/components/paginaweb/ProfesorsitoInicial.vue")["default"]);
+Vue.component('profesorsito-primaria', __webpack_require__(/*! ./components/paginaweb/ProfesorsitoPrimaria.vue */ "./resources/js/components/paginaweb/ProfesorsitoPrimaria.vue")["default"]);
+Vue.component('profesorsito-secundaria', __webpack_require__(/*! ./components/paginaweb/ProfesorsitoSecundaria.vue */ "./resources/js/components/paginaweb/ProfesorsitoSecundaria.vue")["default"]);
 Vue.component('blogcito', __webpack_require__(/*! ./components/paginaweb/Blogcito.vue */ "./resources/js/components/paginaweb/Blogcito.vue")["default"]);
 Vue.component('noticita', __webpack_require__(/*! ./components/paginaweb/Noticita.vue */ "./resources/js/components/paginaweb/Noticita.vue")["default"]);
 var app = new Vue({
@@ -70904,6 +71123,144 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ProfesorsitoInicial_vue_vue_type_template_id_195077de___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ProfesorsitoInicial_vue_vue_type_template_id_195077de___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/paginaweb/ProfesorsitoPrimaria.vue":
+/*!********************************************************************!*\
+  !*** ./resources/js/components/paginaweb/ProfesorsitoPrimaria.vue ***!
+  \********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _ProfesorsitoPrimaria_vue_vue_type_template_id_b2adb9d4___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ProfesorsitoPrimaria.vue?vue&type=template&id=b2adb9d4& */ "./resources/js/components/paginaweb/ProfesorsitoPrimaria.vue?vue&type=template&id=b2adb9d4&");
+/* harmony import */ var _ProfesorsitoPrimaria_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ProfesorsitoPrimaria.vue?vue&type=script&lang=js& */ "./resources/js/components/paginaweb/ProfesorsitoPrimaria.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _ProfesorsitoPrimaria_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _ProfesorsitoPrimaria_vue_vue_type_template_id_b2adb9d4___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _ProfesorsitoPrimaria_vue_vue_type_template_id_b2adb9d4___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/paginaweb/ProfesorsitoPrimaria.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/paginaweb/ProfesorsitoPrimaria.vue?vue&type=script&lang=js&":
+/*!*********************************************************************************************!*\
+  !*** ./resources/js/components/paginaweb/ProfesorsitoPrimaria.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ProfesorsitoPrimaria_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./ProfesorsitoPrimaria.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/paginaweb/ProfesorsitoPrimaria.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ProfesorsitoPrimaria_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/paginaweb/ProfesorsitoPrimaria.vue?vue&type=template&id=b2adb9d4&":
+/*!***************************************************************************************************!*\
+  !*** ./resources/js/components/paginaweb/ProfesorsitoPrimaria.vue?vue&type=template&id=b2adb9d4& ***!
+  \***************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ProfesorsitoPrimaria_vue_vue_type_template_id_b2adb9d4___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./ProfesorsitoPrimaria.vue?vue&type=template&id=b2adb9d4& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/paginaweb/ProfesorsitoPrimaria.vue?vue&type=template&id=b2adb9d4&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ProfesorsitoPrimaria_vue_vue_type_template_id_b2adb9d4___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ProfesorsitoPrimaria_vue_vue_type_template_id_b2adb9d4___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/paginaweb/ProfesorsitoSecundaria.vue":
+/*!**********************************************************************!*\
+  !*** ./resources/js/components/paginaweb/ProfesorsitoSecundaria.vue ***!
+  \**********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _ProfesorsitoSecundaria_vue_vue_type_template_id_d304a0ac___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ProfesorsitoSecundaria.vue?vue&type=template&id=d304a0ac& */ "./resources/js/components/paginaweb/ProfesorsitoSecundaria.vue?vue&type=template&id=d304a0ac&");
+/* harmony import */ var _ProfesorsitoSecundaria_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ProfesorsitoSecundaria.vue?vue&type=script&lang=js& */ "./resources/js/components/paginaweb/ProfesorsitoSecundaria.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _ProfesorsitoSecundaria_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _ProfesorsitoSecundaria_vue_vue_type_template_id_d304a0ac___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _ProfesorsitoSecundaria_vue_vue_type_template_id_d304a0ac___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/paginaweb/ProfesorsitoSecundaria.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/paginaweb/ProfesorsitoSecundaria.vue?vue&type=script&lang=js&":
+/*!***********************************************************************************************!*\
+  !*** ./resources/js/components/paginaweb/ProfesorsitoSecundaria.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ProfesorsitoSecundaria_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./ProfesorsitoSecundaria.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/paginaweb/ProfesorsitoSecundaria.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ProfesorsitoSecundaria_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/paginaweb/ProfesorsitoSecundaria.vue?vue&type=template&id=d304a0ac&":
+/*!*****************************************************************************************************!*\
+  !*** ./resources/js/components/paginaweb/ProfesorsitoSecundaria.vue?vue&type=template&id=d304a0ac& ***!
+  \*****************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ProfesorsitoSecundaria_vue_vue_type_template_id_d304a0ac___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./ProfesorsitoSecundaria.vue?vue&type=template&id=d304a0ac& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/paginaweb/ProfesorsitoSecundaria.vue?vue&type=template&id=d304a0ac&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ProfesorsitoSecundaria_vue_vue_type_template_id_d304a0ac___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ProfesorsitoSecundaria_vue_vue_type_template_id_d304a0ac___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

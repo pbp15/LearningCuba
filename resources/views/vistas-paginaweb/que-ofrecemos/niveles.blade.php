@@ -49,7 +49,7 @@
                             <h3 class="text-center"><a href="#">Inicial</a></h3>
                             <p>Los estudiantes descubren su característica de niño (a) y se establece una ruta hacia resultados de los próximos niveles con su desarrollo potencial biológico, afectivo,
                                  cognitivo y social de toda persona.</p>
-                            <p><a href="{{route('inicial')}}" class="btn btn-primary">Ver más</a></p>
+                            <p class="text-center" ><a href="{{route('inicial')}}" class="btn btn-primary">Ver más</a></p>
                         </div>
                     </div>
                     <div class="col-md-3 course ftco-animate">
@@ -59,7 +59,7 @@
                             <h3 class="text-center"><a href="#">Primaria</a></h3>
                             <p>En los primeros grados se desarrolla en progresión de la transición de los estudiantes de un nivel a otro de manera articulada, desarrollando sus
                                  competencias y capacidades de acuerdo a los enfoques del proceso de enseñanza aprendizaje.</p>
-                            <p><a href="{{route('primaria')}}" class="btn btn-primary">Ver más</a></p>
+                            <p class="text-center" ><a href="{{route('primaria')}}" class="btn btn-primary">Ver más</a></p>
                         </div>
                     </div>
                     <div class="col-md-3 course ftco-animate">
@@ -69,9 +69,20 @@
                             <h3 class="text-center"><a href="#">Secundaria</a></h3>
                             <p>Se afianza los aprendizajes y se forma para la vida,
                                  reafirmando su personalidad para asumir los retos de la vida.</p>
-                            <p><a href="{{route('secundaria')}}" class="btn btn-primary">Ver más</a></p>
+                            <p class="text-center" ><a href="{{route('secundaria')}}" class="btn btn-primary">Ver más</a></p>
                         </div>
-                    </div>               
+                    </div>   
+                    
+                    <div class="col-md-3 course ftco-animate">
+                        <div class="img" style="background-image: url(images/sec2.jpg);"></div>
+                        <div class="text pt-4">
+                            
+                            <h3 class="text-center"><a href="#">Pre-Universitario</a></h3>
+                            <p>Se  brindan todas las capacidades y conocimientos para que pueda postular a un centro superior y rendir optimamente sus aptitudes</p>				
+                            <p class="text-center"><a href="#" class="btn btn-primary">Ver más</a></p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>

@@ -123,7 +123,7 @@ class ProfesoreController extends Controller
  
        public function getDatosSecundaria(Request $request){
  
-         //  if (!$request->ajax()) return redirect('/');
+          if (!$request->ajax()) return redirect('/');
            $profesores = Profesore::where('profesores.nivel','secundaria')
           ->orderBy('id','asc')->get();
            return [ 'profesores' => $profesores];       

@@ -42,6 +42,8 @@ Vue.component('testimonito', require('./components/paginaweb/Testimonito.vue').d
 Vue.component('formularito', require('./components/paginaweb/Formularito.vue').default);
 Vue.component('admisionito', require('./components/paginaweb/Admisionito.vue').default);
 Vue.component('profesorsito-inicial', require('./components/paginaweb/ProfesorsitoInicial.vue').default);
+Vue.component('profesorsito-primaria', require('./components/paginaweb/ProfesorsitoPrimaria.vue').default);
+Vue.component('profesorsito-secundaria', require('./components/paginaweb/ProfesorsitoSecundaria.vue').default);
 Vue.component('blogcito', require('./components/paginaweb/Blogcito.vue').default);
 Vue.component('noticita', require('./components/paginaweb/Noticita.vue').default);
 

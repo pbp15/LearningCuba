@@ -3,26 +3,26 @@
 	<form  class="appointment-form " >
   							<div class="d-md-flex">
                                         <div class="form-group ml-md-4">
-									<input type="text" v-model="apellidos" class="form-control" placeholder="Apellidos">
+									<input type="text" v-model="apellidos" class="form-control" placeholder="Apellidos"  required  maxlength="100" >
 								</div>
 								<div class="form-group">
-									<input type="text" v-model="nombres" class="form-control" placeholder="Nombres">
+									<input type="text" v-model="nombres" class="form-control" placeholder="Nombres"  required  maxlength="100" >
 								</div>
 								
 							</div>
 							<div class="d-md-flex">
 							
 								<div class="form-group ml-md-4">
-									<input type="number" v-model="telefono" class="form-control" placeholder="Celular">
+									<input type="number" v-model="telefono" class="form-control" placeholder="Celular" required minlength="9"   maxlength="9" >
 								</div>
 
                                         <div class="form-group">
-									<input type="email" v-model="email" class="form-control" placeholder=" Email">
+									<input type="email" v-model="email" class="form-control" placeholder=" Email" required >
 								</div>
 							</div>
 							<div class="d-md-flex">
 								<div class="form-group ml-md-4">
-									<textarea  v-model="asunto" cols="30" rows="2" class="form-control" placeholder="Asunto"></textarea>
+									<textarea  v-model="asunto" cols="30" rows="2" class="form-control" placeholder="Asunto" required  maxlength="300" ></textarea>
 								</div>
 							</div>                
 
