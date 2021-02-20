@@ -63,7 +63,7 @@
             @elseif (Auth::user()->idrol == 2)
                 @include('plantilla.sidebarsecretaria')
             @elseif (Auth::user()->idrol == 3)
-                @include('plantilla.sidebargerente')
+                @include('plantilla.sidebarpromotor')
             @elseif (Auth::user()->idrol == 4)
                 @include('plantilla.sidebarusuario')
             @else
