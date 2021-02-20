@@ -6640,13 +6640,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
       nombres_apo: '',
       dni_apo: '',
       nombres_estud: '',
-      dndni_estud: '',
+      dni_estud: '',
       telefono: '',
       email: '',
       nivel: '',
@@ -6667,10 +6669,11 @@ __webpack_require__.r(__webpack_exports__);
         'email': this.email,
         'nivel': this.nivel
       }).then(function (response) {
-        me.correctoRegistro();
+        // alert("El formulario se registro con éxito");  
+        console.log(response);
         me.cerrarModal();
       })["catch"](function (error) {
-        swal('Registro incorrecto!', 'Todos los Campos son Obligatorios', 'error');
+        //   alert("Vuelva a registrar el formulario ");                   
         console.log(error);
       });
     },
@@ -6679,13 +6682,10 @@ __webpack_require__.r(__webpack_exports__);
       this.dni_apo = '';
       this.nombres_estud = '';
       this.dni_estud = '';
-      this.telefono = 0;
-      this.email = 0;
+      this.telefono = '';
+      this.email = '';
       this.nivel = '';
       this.errorAdmision = 0;
-    },
-    correctoRegistro: function correctoRegistro() {
-      swal('Registrado!', 'Gracias por Contactarnos, pronto le escribiremos', 'success');
     }
   },
   mounted: function mounted() {
@@ -7372,7 +7372,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.div-error{\n     display: flex;\n     justify-content: center;\n}\n.text-error{\n     color: red !important;\n     font-weight: bold;\n}\n.nivel {\n \n      color: rgb(236, 226, 226) !important;\n}\n\n ", ""]);
+exports.push([module.i, "\n.div-error{\n     display: flex;\n     justify-content: center;\n}\n.text-error{\n     color: red !important;\n     font-weight: bold;\n}\n.label-form {\n \n      color: rgb(236, 226, 226) !important;\n}\n\n ", ""]);
 
 // exports
 
@@ -56182,7 +56182,9 @@ var render = function() {
           staticClass: "form-control",
           attrs: {
             type: "text",
-            placeholder: "Nombres y Apellidos del apoderado"
+            placeholder: "Nombres y Apellidos del apoderado",
+            required: "",
+            maxlength: "100"
           },
           domProps: { value: _vm.nombres_apo },
           on: {
@@ -56207,7 +56209,13 @@ var render = function() {
             }
           ],
           staticClass: "form-control",
-          attrs: { type: "text", placeholder: "Dni del apoderado" },
+          attrs: {
+            type: "number",
+            placeholder: "Dni del apoderado",
+            required: "",
+            minlength: "8",
+            maxlength: "8"
+          },
           domProps: { value: _vm.dni_apo },
           on: {
             input: function($event) {
@@ -56235,7 +56243,9 @@ var render = function() {
           staticClass: "form-control",
           attrs: {
             type: "text",
-            placeholder: "Nombres y Apellidos del estudiante"
+            placeholder: "Nombres y Apellidos del estudiante",
+            required: "",
+            maxlength: "100"
           },
           domProps: { value: _vm.nombres_estud },
           on: {
@@ -56260,7 +56270,13 @@ var render = function() {
             }
           ],
           staticClass: "form-control",
-          attrs: { type: "text", placeholder: "Dni del estudiante" },
+          attrs: {
+            type: "number",
+            placeholder: "Dni del estudiante",
+            required: "",
+            minlength: "8",
+            maxlength: "8"
+          },
           domProps: { value: _vm.dni_estud },
           on: {
             input: function($event) {
@@ -56286,7 +56302,13 @@ var render = function() {
             }
           ],
           staticClass: "form-control",
-          attrs: { type: "number", placeholder: "Celular del apoderado" },
+          attrs: {
+            type: "number",
+            placeholder: "Celular del apoderado",
+            required: "",
+            minlength: "9",
+            maxlength: "9"
+          },
           domProps: { value: _vm.telefono },
           on: {
             input: function($event) {
@@ -56310,7 +56332,12 @@ var render = function() {
             }
           ],
           staticClass: "form-control",
-          attrs: { type: "email", placeholder: "Correo electrónico" },
+          attrs: {
+            type: "email",
+            placeholder: "Correo electrónico",
+            required: "",
+            maxlength: "35"
+          },
           domProps: { value: _vm.email },
           on: {
             input: function($event) {
@@ -56326,7 +56353,7 @@ var render = function() {
     _vm._v(" "),
     _c("div", { staticClass: "d-md-flex" }, [
       _c("div", { staticClass: "form-group ml-md-4" }, [
-        _c("label", { staticClass: "nivel", attrs: { for: "nivel" } }, [
+        _c("label", { staticClass: "label-form", attrs: { for: "nivel" } }, [
           _vm._v("Seleccione el nivel educativo")
         ]),
         _vm._v(" "),
@@ -56342,7 +56369,7 @@ var render = function() {
               }
             ],
             staticClass: "custom-select my-1 mr-sm-2",
-            attrs: { id: "nivel" },
+            attrs: { id: "nivel", required: "" },
             on: {
               change: function($event) {
                 var $$selectedVal = Array.prototype.filter
@@ -56381,7 +56408,7 @@ var render = function() {
           attrs: { type: "submit", value: "Enviar" },
           on: {
             click: function($event) {
-              return _vm.registrarFicha()
+              return _vm.registrarAdmision()
             }
           }
         })
@@ -70400,15 +70427,14 @@ __webpack_require__.r(__webpack_exports__);
 /*!***********************************************************!*\
   !*** ./resources/js/components/paginaweb/Admisionito.vue ***!
   \***********************************************************/
-/*! no static exports found */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Admisionito_vue_vue_type_template_id_5ec49494___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Admisionito.vue?vue&type=template&id=5ec49494& */ "./resources/js/components/paginaweb/Admisionito.vue?vue&type=template&id=5ec49494&");
 /* harmony import */ var _Admisionito_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Admisionito.vue?vue&type=script&lang=js& */ "./resources/js/components/paginaweb/Admisionito.vue?vue&type=script&lang=js&");
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _Admisionito_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _Admisionito_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
-/* harmony import */ var _Admisionito_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Admisionito.vue?vue&type=style&index=0&lang=css& */ "./resources/js/components/paginaweb/Admisionito.vue?vue&type=style&index=0&lang=css&");
+/* empty/unused harmony star reexport *//* harmony import */ var _Admisionito_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Admisionito.vue?vue&type=style&index=0&lang=css& */ "./resources/js/components/paginaweb/Admisionito.vue?vue&type=style&index=0&lang=css&");
 /* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -70440,7 +70466,7 @@ component.options.__file = "resources/js/components/paginaweb/Admisionito.vue"
 /*!************************************************************************************!*\
   !*** ./resources/js/components/paginaweb/Admisionito.vue?vue&type=script&lang=js& ***!
   \************************************************************************************/
-/*! no static exports found */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

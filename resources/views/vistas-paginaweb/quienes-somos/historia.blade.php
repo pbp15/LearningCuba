@@ -58,7 +58,7 @@
 					</div>
 				</div>
 				<div class="col-md-6 heading-section heading-section-white ftco-animate pl-lg-5 pt-md-0 pt-5">
-					<h2 class="mb-4">Colegio "Einstein"</h2>
+					<h2 class="mb-4">I.E.P "Einstein"- Tarma</h2>
 					<p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary
 						regelialia. It is a paradisematic country. A small river named Duden flows by their place and supplies it
 						with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into

@@ -3,30 +3,32 @@
 	<form  class="appointment-form " >
   							<div class="d-md-flex">
                                  <div class="form-group ml-md-4">
-									<input type="text" v-model="nombres_apo" class="form-control" placeholder="Nombres y Apellidos del apoderado">
+									<input type="text" v-model="nombres_apo" class="form-control" placeholder="Nombres y Apellidos del apoderado" required  maxlength="100">
 								</div>
 								<div class="form-group">
-									<input type="text" v-model="dni_apo" class="form-control" placeholder="Dni del apoderado">
+									<input type="number" v-model="dni_apo" class="form-control" placeholder="Dni del apoderado" required  minlength="8" maxlength="8" >
 								</div>
 								
 							</div>
                             <div class="d-md-flex">
                                         <div class="form-group ml-md-4">
-									<input type="text" v-model="nombres_estud" class="form-control" placeholder="Nombres y Apellidos del estudiante">
+									<input type="text" v-model="nombres_estud" class="form-control" placeholder="Nombres y Apellidos del estudiante" required  maxlength="100"> 
 								</div>
 								<div class="form-group">
-									<input type="text" v-model="dni_estud" class="form-control" placeholder="Dni del estudiante">
+									<input type="number" v-model="dni_estud" class="form-control" placeholder="Dni del estudiante" required minlength="8"  maxlength="8" >
 								</div>
 								
 							</div>
 							<div class="d-md-flex">
 							
 								<div class="form-group ml-md-4">
-									<input type="number" v-model="telefono" class="form-control" placeholder="Celular del apoderado">
+                              
+									<input type="number" v-model="telefono" class="form-control" placeholder="Celular del apoderado" required minlength="9"   maxlength="9">
 								</div>
 
                                 <div class="form-group ml-md-4">
-									<input type="email" v-model="email" class="form-control" placeholder="Correo electrónico">
+                              
+									<input type="email" v-model="email" class="form-control" placeholder="Correo electrónico" required maxlength="35">
 								</div>
 
                                
@@ -35,8 +37,8 @@
                             	<div class="d-md-flex">
                                
                                     <div class="form-group ml-md-4" >
-                                        <label class="nivel" for="nivel">Seleccione el nivel educativo</label>
-                                        <select v-model="nivel" class="custom-select my-1 mr-sm-2" id="nivel" >
+                                        <label class="label-form" for="nivel">Seleccione el nivel educativo</label>
+                                        <select v-model="nivel" class="custom-select my-1 mr-sm-2" id="nivel" required >
                                             <option value="inicial">Inicial</option>
                                             <option value="primaria">Primaria</option>
                                             <option value="secundaria">Secundaria</option>
@@ -47,7 +49,7 @@
                             <div class="d-md-flex mt-4">
 								
 								<div class="form-group ml-md-4">
-									<input type="submit" value="Enviar" @click="registrarFicha()" class="btn btn-primary py-3 px-4">
+									<input type="submit" value="Enviar" @click="registrarAdmision()" class="btn btn-primary py-3 px-4">
 								</div>
 							</div>
                           <div class="d-md-flex">
@@ -73,7 +75,7 @@
                  nombres_apo : '',
                  dni_apo : '',
                 nombres_estud : '',
-                 dndni_estud : '',
+                 dni_estud : '',
                 telefono : '',                
                 email : '',
                 nivel : '',
@@ -99,15 +101,12 @@
                     'telefono': this.telefono,
                     'email': this.email,
                     'nivel': this.nivel,
-                }).then(function (response) {
-                    me.correctoRegistro();
+                }).then(function (response) { 
+                  // alert("El formulario se registro con éxito");  
+                     console.log(response);           
                     me.cerrarModal();
-                }).catch(function (error) {
-                     swal(
-                        'Registro incorrecto!',
-                        'Todos los Campos son Obligatorios',
-                        'error'
-                        )
+                }).catch(function (error) {    
+                  //   alert("Vuelva a registrar el formulario ");                   
                     console.log(error);
                 });
             },
@@ -116,19 +115,11 @@
                 this.dni_apo = '';
                 this.nombres_estud = '';
                 this.dni_estud = '';  
-                this.telefono = 0;
-                this.email = 0;
+                this.telefono = '';
+                this.email = '';
                 this.nivel= '';
 		        this.errorAdmision=0;
-            },
-        
-        correctoRegistro(){
-                swal(  
-                        'Registrado!',
-                        'Gracias por Contactarnos, pronto le escribiremos',
-                        'success'
-                     )
-        },
+            },        
 
 
         },
@@ -149,7 +140,7 @@
         color: red !important;
         font-weight: bold;
     }
-    .nivel {
+    .label-form {
     
          color: rgb(236, 226, 226) !important;
     }

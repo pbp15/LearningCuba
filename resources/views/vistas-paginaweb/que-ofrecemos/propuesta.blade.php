@@ -35,8 +35,19 @@
                 <div class="row justify-content-center mb-5 pb-2">
                     <div class="col-md-8 text-center heading-section ftco-animate">
                         <h2 class="mb-4">Propuesta Educativa</h2>
-                        <p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary
-                            regelialia. It is a paradisematic country</p>
+                        <p>
+                            Formación integral de nuestros estudiantes promoviendo el desarrollo de competencias y capacidades cognitivas, convirtiendo a los estudiantes en agentes activos de su aprendizaje.
+                        </p>  
+                           
+                                 <strong>INICIAL</strong>  
+                         <p> Los estudiantes descubren su característica de niño (a) y se establece una ruta hacia resultados de los próximos niveles con su desarrollo potencial biológico, afectivo, cognitivo y social de toda persona.</p>  
+                            
+                               <strong> PRIMARIA </strong>  
+                         <p>En los primeros grados se desarrolla en progresión de la transición de los estudiantes de un nivel a otro de manera articulada, desarrollando sus competencias y capacidades de acuerdo a los enfoques del proceso de enseñanza aprendizaje.</p>   
+                            
+                                <strong>  SECUNDARIA</strong>  
+                         <p> Se afianza los aprendizajes y se forma para la vida, reafirmando su personalidad para asumir los retos de la vida.</p>  
+                         
                     </div>
                 </div>             
             </div>
