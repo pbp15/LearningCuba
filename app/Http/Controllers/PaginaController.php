@@ -12,6 +12,11 @@ class PaginaController extends Controller
        return view('pagina');
     }
 
+    public function inicioreal()
+    {
+       return view('page');
+    }
+
     
 
     //MENU DE QUIENES SOMOS

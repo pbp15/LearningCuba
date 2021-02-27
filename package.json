@@ -25,6 +25,7 @@
     },
     "name": "Tr-miteDoc-MDa",
     "dependencies": {
+        "@fortawesome/fontawesome-free": "^5.15.2",
         "moment": "^2.29.1",
         "sweetalert2": "^10.10.4",
         "vue-resource": "^1.5.1",
